@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<body>
+    <script>
+        function check(){
+            var uid=document.getElementById("userid").value;
+            var pass=document.getElementById("passd").value;
+            var msg="";
+            if(uid==0 && pass<=0){
+                alert("username and password cannot be empty");
+            }
+            else if(uid.length==0){
+                alert("Please enter username");
+            }
+            else if(pass.length<=0){
+                alert("Please enter password");
+            }
+            
+             else{
+                alert("Login successful");
+            }
+        }
+    </script>
+    <form action="" method="">
+        <label for="username">Name:</label>
+        <input type="text" id="userid" name="username">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="passd" name="password" required>
+        <br><br>
+        <input type="submit" value="Submit" onclick="check();">
+    </form>
+</body>
+</html>
