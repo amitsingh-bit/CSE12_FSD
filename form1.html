@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <script>
+        function validatePassword() {
+            var cpwd = document.getElementById("cpwd").value;
+            var uid=document.getElementById("uid").value;
+            var pass=document.getElementById("pass").value;
+            var msg="";
+            if(uid.length==0 || pass.length==0 || cpwd.length==0){
+                if(uid.length==0 && pass.length==0){
+                alert("Username and password cannot be empty");
+                }
+                else if(uid.length==0){
+                    alert("Please enter username");
+                }
+                else if(pass.length<=0 || cpwd.length<=0){
+                    alert("Please fill in both password fields");
+                }
+                return false;
+            }
+            else if(pass.length>=0 && cpwd.length>=0){
+                if (pass === cpwd) {
+                alert("Login successful!");
+                return true;
+                } else {
+                    alert("Passwords do not match!");
+                    return false;
+                }
+            }
+            else{
+                alert("Login successful");
+                return true;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="">
+        <label for="username">Username:</label>
+        <input type="text" id="uid" name="name"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="pass" name="password"><br><br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="cpwd" name="confirmPassword"><br><br>
+        <input type="submit" value="Submit" onclick="return validatePassword();">
+    </form>
+</body>
+</html>
