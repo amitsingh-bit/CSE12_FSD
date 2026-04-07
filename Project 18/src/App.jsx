@@ -4,7 +4,6 @@ function App() {
   return (
     <div className="App">
       
-      {/* Navbar */}
       <div className="navbar">
         <div className="menu">
           <a href="#">Home</a>
@@ -14,7 +13,6 @@ function App() {
         </div>
       </div>
 
-      {/* Content */}
       <h1 style={{ textAlign: "center", marginTop: "50px" }}>
         Welcome to My Website
       </h1>
