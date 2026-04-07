@@ -1,10 +1,13 @@
+import './App.css';
+
 function App() {
   return (
-    <div style={{color: "white", backgroundColor: "blue", padding: "10px"}}>
-      <h2>HELLO REACT</h2>
-      <p>THIS IS INLINE STYLING</p>
+    <div className="App">
+      <div className="box">
+        <h1>CSS MODULE EXAMPLE</h1>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
